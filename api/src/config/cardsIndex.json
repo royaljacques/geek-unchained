@@ -1,0 +1,10 @@
+{
+    "chasseur":{
+        "name": "chasseur",
+        "imagePath": ""
+    },
+    "cupidon":{
+        "name": "cupidon",
+        "imagePath": ""
+    }
+}

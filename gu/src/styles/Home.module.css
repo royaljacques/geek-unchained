@@ -1,0 +1,44 @@
+.container{
+  margin: 0;
+}
+.titleDiv{
+  margin: 0;
+  line-height: 200px;
+  height: 200px;
+}
+.titleDay{
+  align-items: center;
+  color: #FF8200;
+  font-family: "Times New Roman", Sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 55px;
+  vertical-align: middle;
+}
+.imgTabler{
+  height: 700px;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+}
+.tabler1{
+  width: 50%;
+  float: left;
+  height: 100%;
+  text-align: center;
+
+}
+.tabler2{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+.text{
+
+  color: #FF8200;
+  font-family: "Times New Roman", Sans-serif;
+  font-weight: 600;
+}
