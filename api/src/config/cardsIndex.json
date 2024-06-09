@@ -1,10 +1,10 @@
 {
     "chasseur":{
         "name": "chasseur",
-        "imagePath": ""
+        "imagePath": "Chasseur.png"
     },
     "cupidon":{
         "name": "cupidon",
-        "imagePath": ""
+        "imagePath": "Cupidon.png"
     }
 }

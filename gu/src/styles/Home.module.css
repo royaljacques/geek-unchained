@@ -1,12 +1,12 @@
-.container{
+.container {
   margin: 0;
 }
-.titleDiv{
+.titleDiv {
   margin: 0;
   line-height: 200px;
   height: 200px;
 }
-.titleDay{
+.titleDay {
   align-items: center;
   color: #FF8200;
   font-family: "Times New Roman", Sans-serif;
@@ -15,30 +15,36 @@
   font-size: 55px;
   vertical-align: middle;
 }
-.imgTabler{
-  height: 700px;
-  width: 90%;
-  align-items: center;
+.imgTabler {
+  display: flex; /* Utilisation de flexbox */
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-start; /* Alignement au début */
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
-  display: flex;
-}
-.tabler1{
-  width: 50%;
-  float: left;
   height: 100%;
-  text-align: center;
-
 }
-.tabler2{
-  width: 50%;
-  height: 100%;
+.tabler1, .tabler2 {
+  flex: 1; /* Les deux sections prennent un espace égal */
   text-align: center;
+  padding: 10px; /* Optionnel : ajouter un peu d'espace autour */
 }
-.text{
-
+.text {
   color: #FF8200;
   font-family: "Times New Roman", Sans-serif;
   font-weight: 600;
+}
+.imageWrapper {
+  display: inline-block;
+  position: relative;
+}
+@keyframes burn {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+
+.burning {
+  animation: burn 1s ease-out forwards;
 }

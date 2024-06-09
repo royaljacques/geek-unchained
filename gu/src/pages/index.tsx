@@ -1,9 +1,43 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
-  const [day, setDay] = useState(2)
+  const [day, setDay] = useState(2);
+  const [wolfImages, setWolfImages] = useState<React.ReactNode[]>([]);
+  const [villagerImages, setVillagerImages] = useState<React.ReactNode[]>([])
+
+  const checkAliveCard = async () => {
+    setInterval(async () => {
+      try {
+        const response = await fetch("https://fantastic-train-pwx9w4wg5vw2rr6j-8080.app.github.dev/games/cards");
+        const result = await response.json();
+        const newWolfImages = Object.entries(result.data).map(([key, value]) => {
+          if (value) {
+            return (
+              <Image
+                key={key}
+                src={`https://fantastic-train-pwx9w4wg5vw2rr6j-8080.app.github.dev/public/assets/${key}.png`}
+                alt={key}
+                width={100} // Ajuste les dimensions selon tes besoins
+                height={100}
+              />
+            );
+          }
+          return null;
+        }).filter(image => image !== null);
+        setWolfImages(newWolfImages);
+      } catch (error) {
+        console.error(error);
+      }
+    }, 1000)
+  };
+
+  useEffect(() => {
+    checkAliveCard();
+  }, []);
+
   return (
     <>
       <Head>
@@ -12,19 +46,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <div className={`${styles.container}`}>
-          <div className={`${styles.titleDiv}`}>
-            <div className={styles.titleDay}>JOURS {day}</div>
+      <div className={`${styles.container}`}>
+        <div className={`${styles.titleDiv}`}>
+          <div className={styles.titleDay}>JOURS {day}</div>
+        </div>
+        <div className={`${styles.imgTabler}`}>
+          <div className={`${styles.tabler1}`}>
+            <h1 className={`${styles.text}`}>LOUPS-GAROUS</h1>
+            <div>{wolfImages}</div>
           </div>
-          <div className={`${styles.imgTabler}`}>
-            <div className={`${styles.tabler1}`}>
-              <h1 className={`${styles.text}`}>LOUPS-GAROUS</h1>
-            </div>
-            <div className={`${styles.tabler2}`}>
+          <div className={`${styles.tabler2}`}>
             <h1 className={`${styles.text}`}>VILLAGEOIS</h1>
-            </div>
           </div>
         </div>
+      </div>
     </>
   );
 }

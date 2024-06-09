@@ -1,6 +1,17 @@
 {
-    "0":{
+    "chasseur":{
         "name": "chasseur",
-        "imagePath": ""
+        "imagePath": "Chasseur.png",
+        "type": "villager"
+    },
+    "cupidon":{
+        "name": "cupidon",
+        "imagePath": "Cupidon.png",
+        "type": "villager"
+    },
+    "werenfolf": {
+        "name": "loup-garou",
+        "imagePath": "werenwolf.png",
+        "type": "monster"
     }
 }

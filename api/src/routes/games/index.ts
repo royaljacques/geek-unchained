@@ -8,19 +8,12 @@ async function routes(fastify: FastifyInstance, options: FastifyPluginOptions): 
           id: 1
         }
       })
-    
-      return { data: result}
+      if(result != null){
+        const { partyName, id,winner, ...filteredResult } = result;
+
+        return { data: filteredResult}
+      }      
     });
-    fastify.get('/games/cards/image', async (request: FastifyRequest, reply) => {
-  
-
-      return {data:
-        {
-          
-        }
-      }
-    })
-
   }
   
   module.exports = routes
