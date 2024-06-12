@@ -19,8 +19,13 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const __1 = require("../../..");
+const path_1 = __importDefault(require("path"));
+const fs_1 = require("fs");
 const cardIndex = require("./../../config/cardsIndex.json");
 function routes(fastify, options) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -34,6 +39,22 @@ function routes(fastify, options) {
                 const { partyName, id, winner } = result, filteredResult = __rest(result, ["partyName", "id", "winner"]);
                 return { data: filteredResult };
             }
+        }));
+        fastify.get('/games/json/*', (req, reply) => __awaiter(this, void 0, void 0, function* () {
+            const params = req.params; // Spécifie le type des paramètres
+            const filePath = path_1.default.join(__dirname, 'src', 'config', params['*']);
+            const bufferIndexHtml = (0, fs_1.readFileSync)(filePath);
+            reply.type('text/json').send(bufferIndexHtml);
+            try {
+                yield reply.type('text/html').send(bufferIndexHtml);
+            }
+            catch (error) {
+                console.error(error);
+                reply.code(500).send('Internal Server Error');
+            }
+        }));
+        fastify.get("/dev/routes", (req, reply) => __awaiter(this, void 0, void 0, function* () {
+            reply.send(fastify.printRoutes());
         }));
     });
 }
