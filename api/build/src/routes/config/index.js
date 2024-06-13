@@ -8,20 +8,27 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const __1 = require("../../..");
+const path_1 = __importDefault(require("path"));
+const fs_1 = require("fs");
 function routes(fastify, options) {
     return __awaiter(this, void 0, void 0, function* () {
-        fastify.get("/websocket", { websocket: true }, (connection, req) => {
-            const { socket } = connection;
-            socket.on('message', message => {
-                if (message.toString() === "ping") {
-                    return socket.send("pong");
-                }
-                // message.toString() === 'hi from client'
-                socket.send('hi from server');
-            });
-            socket.send("hi");
-        });
+        fastify.get('/config/json/*', (req, reply) => __awaiter(this, void 0, void 0, function* () {
+            const params = req.params;
+            const filePath = path_1.default.join(__1.folder, 'src', 'config', params['*']);
+            try {
+                const bufferIndexHtml = (0, fs_1.readFileSync)(filePath, 'utf-8');
+                reply.type('application/json').send(bufferIndexHtml);
+            }
+            catch (error) {
+                console.error(error);
+                reply.code(500).send('Internal Server Error');
+            }
+        }));
     });
 }
-exports.default = routes;
+module.exports = routes;

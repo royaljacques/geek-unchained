@@ -9,11 +9,11 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
-model Games {
-  id    Int     @id @default(autoincrement())
-  partyName String
-  winner String @default("null")
-  chasseur Boolean @default(false)
-  cupidon Boolean @default(false)
-}
 
+model Games {
+  id        Int     @id @default(autoincrement())
+  partyName String
+  winner    String  @default("null")
+  chasseur  Boolean @default(false)
+  cupidon   Boolean @default(false)
+}

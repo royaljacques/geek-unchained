@@ -1,10 +1,130 @@
 {
-    "chasseur": {
-        "name": "chasseur",
-        "imagePath": "Chasseur.png"
-    },
-    "cupidon": {
-        "name": "cupidon",
-        "imagePath": "Cupidon.png"
-    }
+  "0": {
+    "name": "Abominable sectaire",
+    "imagePath": "ABOMINABLE_SECTAIRE.png"
+  },
+  "1": {
+    "name": "Ancien",
+    "imagePath": "ANCIEN.png"
+  },
+  "2": {
+    "name": "Ange",
+    "imagePath": "ANGE.png"
+  },
+  "3": {
+    "name": "Bouc emissaire",
+    "imagePath": "BOUC_EMISSAIRE.png"
+  },
+  "4": {
+    "name": "Capitaine",
+    "imagePath": "CAPITAINE.png"
+  },
+  "5": {
+    "name": "Chasseur",
+    "imagePath": "CHASSEUR.png"
+  },
+  "6": {
+    "name": "Chevalier a lepee rouillee ",
+    "imagePath": "CHEVALIER_A_LEPEE_ROUILLEE_.png"
+  },
+  "7": {
+    "name": "Chien loup",
+    "imagePath": "CHIEN_LOUP.png"
+  },
+  "8": {
+    "name": "Comedien",
+    "imagePath": "COMEDIEN.png"
+  },
+  "9": {
+    "name": "Corbeau",
+    "imagePath": "CORBEAU.png"
+  },
+  "10": {
+    "name": "Deux soeurs",
+    "imagePath": "DEUX_SOEURS.png"
+  },
+  "11": {
+    "name": "Dos de carte",
+    "imagePath": "DOS_DE_CARTE.png"
+  },
+  "12": {
+    "name": "Enfant sauvage",
+    "imagePath": "ENFANT_SAUVAGE.png"
+  },
+  "13": {
+    "name": "Gitane sans philtre",
+    "imagePath": "GITANE_SANS_PHILTRE.png"
+  },
+  "14": {
+    "name": "Grand-mechant-loup",
+    "imagePath": "GRAND-MECHANT-LOUP.png"
+  },
+  "15": {
+    "name": "Idiot du village",
+    "imagePath": "IDIOT_DU_VILLAGE.png"
+  },
+  "16": {
+    "name": "Infect pere des loups",
+    "imagePath": "INFECT_PERE_DES_LOUPS.png"
+  },
+  "17": {
+    "name": "Joueur de flute",
+    "imagePath": "JOUEUR_DE_FLUTE.png"
+  },
+  "18": {
+    "name": "Juge begue",
+    "imagePath": "JUGE_BEGUE.png"
+  },
+  "19": {
+    "name": "Loup-garou blanc",
+    "imagePath": "LOUP-GAROU_BLANC.png"
+  },
+  "20": {
+    "name": "Loup garou",
+    "imagePath": "LOUP_GAROU.png"
+  },
+  "21": {
+    "name": "Montreur dours",
+    "imagePath": "MONTREUR_DOURS.png"
+  },
+  "22": {
+    "name": "Petite fille",
+    "imagePath": "PETITE_FILLE.png"
+  },
+  "23": {
+    "name": "Renard",
+    "imagePath": "RENARD.png"
+  },
+  "24": {
+    "name": "Salvateur",
+    "imagePath": "SALVATEUR.png"
+  },
+  "25": {
+    "name": "Servante devouee",
+    "imagePath": "SERVANTE_DEVOUEE.jpg"
+  },
+  "26": {
+    "name": "Sorciere",
+    "imagePath": "SORCIERE.png"
+  },
+  "27": {
+    "name": "Trois freres",
+    "imagePath": "TROIS_FRERES.png"
+  },
+  "28": {
+    "name": "Unknown",
+    "imagePath": "Unknown.jpeg"
+  },
+  "29": {
+    "name": "Villageois",
+    "imagePath": "VILLAGEOIS.png"
+  },
+  "30": {
+    "name": "Voleur",
+    "imagePath": "VOLEUR.png"
+  },
+  "31": {
+    "name": "Voyante",
+    "imagePath": "VOYANTE.jpg"
+  }
 }

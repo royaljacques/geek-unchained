@@ -16,8 +16,10 @@
     "@fastify/websocket": "^5.0.1",
     "@prisma/client": "^5.15.0",
     "@types/base-64": "^1.0.2",
+    "@types/uuid": "^9.0.8",
     "base-64": "^1.0.0",
-    "fastify": "^4.27.0"
+    "fastify": "^4.27.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",

@@ -1,11 +1,13 @@
 .container {
   margin: 0;
 }
+
 .titleDiv {
   margin: 0;
   line-height: 200px;
   height: 200px;
 }
+
 .titleDay {
   align-items: center;
   color: #FF8200;
@@ -15,36 +17,153 @@
   font-size: 55px;
   vertical-align: middle;
 }
+
 .imgTabler {
-  display: flex; /* Utilisation de flexbox */
+  display: flex;
+  /* Utilisation de flexbox */
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start; /* Alignement au début */
+  align-items: flex-start;
+  /* Alignement au début */
   width: 90%;
   margin-right: auto;
   margin-left: auto;
   height: 100%;
 }
-.tabler1, .tabler2 {
-  flex: 1; /* Les deux sections prennent un espace égal */
+
+.tabler1,
+.tabler2 {
+  flex: 1;
+  /* Les deux sections prennent un espace égal */
   text-align: center;
-  padding: 10px; /* Optionnel : ajouter un peu d'espace autour */
+  padding: 10px;
+  /* Optionnel : ajouter un peu d'espace autour */
 }
+
 .text {
   color: #FF8200;
   font-family: "Times New Roman", Sans-serif;
   font-weight: 600;
 }
+
 .imageWrapper {
   display: inline-block;
   position: relative;
 }
+
 @keyframes burn {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; transform: scale(1.2); }
-  100% { opacity: 0; transform: scale(1.5); }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
 }
 
 .burning {
   animation: burn 1s ease-out forwards;
+}
+
+
+.containerIndex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Assurez-vous que le conteneur prend toute la hauteur de la vue */
+  width: 100%;
+}
+
+.buttonIndex {
+  align-content: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalWrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.modal {
+  max-width: 800px;
+  width: 100%;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cardItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.cardImage {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cardLabel {
+  margin-left: 8px;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modalFooter button {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modalFooter button:hover {
+  background-color: #005bb5;
 }
